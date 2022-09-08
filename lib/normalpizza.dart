@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lab_07/main.dart';
 
 class Normalpizza extends StatefulWidget {
   const Normalpizza({super.key});
@@ -16,6 +17,7 @@ class _NormalpizzaState extends State<Normalpizza> {
         home: Scaffold(
       appBar: AppBar(
         title: Text("Normal pizza"),
+        backgroundColor: Colors.red[300],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -120,6 +122,23 @@ class _NormalpizzaState extends State<Normalpizza> {
                   pizzatype = val.toString();
                 });
               },
+            ),
+            ElevatedButton.icon(
+              onPressed: () {
+                setState(() {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return MyApp();
+                    },
+                  ));
+                });
+              },
+              icon: Icon(Icons.home),
+              label: Text(
+                "Back to home",
+                style: GoogleFonts.combo(fontSize: 30),
+              ),
+              style: ElevatedButton.styleFrom(primary: Colors.pink[200]),
             ),
           ]),
         ),
