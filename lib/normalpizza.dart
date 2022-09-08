@@ -14,7 +14,11 @@ class _NormalpizzaState extends State<Normalpizza> {
       appBar: AppBar(
         title: Text("Normal pizza"),
       ),
-      body: Column(children: []),
+      body: Column(children: [
+        Container(
+          child: Text('Update'),
+        )
+      ]),
     );
   }
 }
